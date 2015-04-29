@@ -1,0 +1,16 @@
+head
+  title= 'Poet Demo'
+  meta(charset='utf-8')
+body
+  .navbar.navbar-fixed-top
+    .navbar-inner
+      .container
+        a.brand(href='/') Poet Demos
+        if(user)
+            p(style="float:right;color:#fff")= user.username
+            a(href="/editor", style="float:right") editor
+            a(href="/logout", style="float:right") logout
+        else
+         a(href="/login", style="float:right") login
+
+include markdown-edit/index.html

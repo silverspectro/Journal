@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title="login"
+    meta(charset="utf-8")
+    link(rel='stylesheet', href='/css/bootstrap.css')
+  body
+    if(message.length > 0)
+      p= message[0]
+    form(action="/login" method="post")
+      .champ
+        label Username:
+        input(type="text" name="username")
+      .champ
+        label Password:
+        input(type="password" name="password")
+      input(type="submit" value="Log In")
